@@ -1,0 +1,7 @@
+.medusa
+.vercel
+.vscode
+node_modules
+build
+public/*
+.DS_Store

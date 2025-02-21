@@ -1,4 +1,4 @@
-import checkEnvVariables from "./check-env-variables";
+import checkEnvVariables from "./check-env-variables.js";
 
 checkEnvVariables();
 

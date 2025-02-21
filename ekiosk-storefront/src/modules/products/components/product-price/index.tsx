@@ -1,24 +1,23 @@
-import { clx } from "@medusajs/ui"
-
-import { getProductPrice } from "@lib/util/get-product-price"
-import { HttpTypes } from "@medusajs/types"
+import { getProductPrice } from "@lib/util/get-product-price";
+import { HttpTypes } from "@medusajs/types";
+import { clx } from "@medusajs/ui";
 
 export default function ProductPrice({
   product,
   variant,
 }: {
-  product: HttpTypes.StoreProduct
-  variant?: HttpTypes.StoreProductVariant
+  product: HttpTypes.StoreProduct;
+  variant?: HttpTypes.StoreProductVariant;
 }) {
   const { cheapestPrice, variantPrice } = getProductPrice({
     product,
     variantId: variant?.id,
-  })
+  });
 
-  const selectedPrice = variant ? variantPrice : cheapestPrice
+  const selectedPrice = variant ? variantPrice : cheapestPrice;
 
   if (!selectedPrice) {
-    return <div className="block w-32 h-9 bg-gray-100 animate-pulse" />
+    return <div className="block h-9 w-32 animate-pulse bg-gray-100" />;
   }
 
   return (
@@ -29,10 +28,7 @@ export default function ProductPrice({
         })}
       >
         {!variant && "From "}
-        <span
-          data-testid="product-price"
-          data-value={selectedPrice.calculated_price_number}
-        >
+        <span data-testid="product-price" data-value={selectedPrice.calculated_price_number}>
           {selectedPrice.calculated_price}
         </span>
       </span>
@@ -48,11 +44,9 @@ export default function ProductPrice({
               {selectedPrice.original_price}
             </span>
           </p>
-          <span className="text-ui-fg-interactive">
-            -{selectedPrice.percentage_diff}%
-          </span>
+          <span className="text-ui-fg-interactive">-{selectedPrice.percentage_diff}%</span>
         </>
       )}
     </div>
-  )
+  );
 }

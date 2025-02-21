@@ -1,13 +1,7 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 const TransferImage = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width="280"
-    height="181"
-    viewBox="0 0 280 181"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="280" height="181" viewBox="0 0 280 181" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect
       x="0.00428286"
       y="-0.742904"
@@ -270,6 +264,6 @@ const TransferImage = (props: SVGProps<SVGSVGElement>) => (
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export default TransferImage
+export default TransferImage;

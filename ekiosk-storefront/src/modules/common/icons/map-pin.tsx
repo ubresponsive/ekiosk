@@ -1,21 +1,9 @@
-import React from "react"
+import React from "react";
+import { IconProps } from "types/icon";
 
-import { IconProps } from "types/icon"
-
-const MapPin: React.FC<IconProps> = ({
-  size = "20",
-  color = "currentColor",
-  ...attributes
-}) => {
+const MapPin: React.FC<IconProps> = ({ size = "20", color = "currentColor", ...attributes }) => {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
-    >
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...attributes}>
       <path
         d="M15.8337 8.63636C15.8337 13.4091 10.0003 17.5 10.0003 17.5C10.0003 17.5 4.16699 13.4091 4.16699 8.63636C4.16699 7.0089 4.78157 5.44809 5.87554 4.2973C6.9695 3.14651 8.45323 2.5 10.0003 2.5C11.5474 2.5 13.0312 3.14651 14.1251 4.2973C15.2191 5.44809 15.8337 7.0089 15.8337 8.63636Z"
         stroke={color}
@@ -31,7 +19,7 @@ const MapPin: React.FC<IconProps> = ({
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default MapPin
+export default MapPin;

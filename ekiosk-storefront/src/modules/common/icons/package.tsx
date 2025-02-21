@@ -1,21 +1,9 @@
-import React from "react"
+import React from "react";
+import { IconProps } from "types/icon";
 
-import { IconProps } from "types/icon"
-
-const Package: React.FC<IconProps> = ({
-  size = "20",
-  color = "currentColor",
-  ...attributes
-}) => {
+const Package: React.FC<IconProps> = ({ size = "20", color = "currentColor", ...attributes }) => {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
-    >
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...attributes}>
       <path
         d="M13.3634 8.02695L6.73047 4.21271"
         stroke={color}
@@ -38,7 +26,7 @@ const Package: React.FC<IconProps> = ({
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default Package
+export default Package;

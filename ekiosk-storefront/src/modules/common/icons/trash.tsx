@@ -1,21 +1,9 @@
-import React from "react"
+import React from "react";
+import { IconProps } from "types/icon";
 
-import { IconProps } from "types/icon"
-
-const Trash: React.FC<IconProps> = ({
-  size = "16",
-  color = "currentColor",
-  ...attributes
-}) => {
+const Trash: React.FC<IconProps> = ({ size = "16", color = "currentColor", ...attributes }) => {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
-    >
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...attributes}>
       <path
         d="M3.33301 5.49054H4.81449H16.6663"
         stroke={color}
@@ -37,15 +25,9 @@ const Trash: React.FC<IconProps> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M11.666 9.23724V13.4039"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M11.666 9.23724V13.4039" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  )
-}
+  );
+};
 
-export default Trash
+export default Trash;

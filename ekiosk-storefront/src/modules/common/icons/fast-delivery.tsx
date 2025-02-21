@@ -1,21 +1,9 @@
-import React from "react"
+import React from "react";
+import { IconProps } from "types/icon";
 
-import { IconProps } from "types/icon"
-
-const FastDelivery: React.FC<IconProps> = ({
-  size = "16",
-  color = "currentColor",
-  ...attributes
-}) => {
+const FastDelivery: React.FC<IconProps> = ({ size = "16", color = "currentColor", ...attributes }) => {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...attributes}>
       <path
         d="M3.63462 7.35205H2.70508"
         stroke={color}
@@ -59,7 +47,7 @@ const FastDelivery: React.FC<IconProps> = ({
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default FastDelivery
+export default FastDelivery;

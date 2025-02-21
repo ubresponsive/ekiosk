@@ -1,21 +1,9 @@
-import React from "react"
+import React from "react";
+import { IconProps } from "types/icon";
 
-import { IconProps } from "types/icon"
-
-const Refresh: React.FC<IconProps> = ({
-  size = "16",
-  color = "currentColor",
-  ...attributes
-}) => {
+const Refresh: React.FC<IconProps> = ({ size = "16", color = "currentColor", ...attributes }) => {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...attributes}
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...attributes}>
       <path
         d="M19.8007 3.33301V8.53308H14.6006"
         stroke={color}
@@ -45,7 +33,7 @@ const Refresh: React.FC<IconProps> = ({
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default Refresh
+export default Refresh;

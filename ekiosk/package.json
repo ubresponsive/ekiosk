@@ -13,16 +13,17 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
+    "setup-db": "medusa db:setup",
     "seed": "medusa exec ./src/scripts/seed.ts",
-    "reset": "medusa db:setup",
     "create-admin": "npx medusa user -e devrahimi@ekiosk.com -p 7D!Vp@Q2BnutyRYms9r-",
-    "start": "medusa start",
+    "reset": "yarn setup-db && yarn seed && yarn create-admin",
+    "format": "prettier --config .prettierrc --write .",
     "dev": "medusa develop",
+    "build": "medusa build",
+    "start": "medusa start",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
-    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
-    "format": "prettier --config .prettierrc --write ."
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.5.0",

@@ -1,0 +1,64 @@
+{
+  "name": "ekiosk",
+  "version": "0.0.1",
+  "description": "A starter for Medusa projects.",
+  "author": "Medusa (https://medusajs.com)",
+  "license": "MIT",
+  "keywords": [
+    "sqlite",
+    "postgres",
+    "typescript",
+    "ecommerce",
+    "headless",
+    "medusa"
+  ],
+  "scripts": {
+    "setup-db": "medusa db:setup",
+    "seed": "medusa exec ./src/scripts/seed.ts",
+    "create-admin": "npx medusa user -e devrahimi@ekiosk.com -p 7D!Vp@Q2BnutyRYms9r-",
+    "reset": "yarn setup-db && yarn seed && yarn create-admin",
+    "format": "prettier --config .prettierrc --write .",
+    "dev": "medusa develop",
+    "build": "medusa build",
+    "start": "medusa start",
+    "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
+    "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+  },
+  "dependencies": {
+    "@medusajs/admin-sdk": "2.5.0",
+    "@medusajs/cli": "2.5.0",
+    "@medusajs/framework": "2.5.0",
+    "@medusajs/medusa": "2.5.0",
+    "@mikro-orm/core": "6.4.6",
+    "@mikro-orm/knex": "6.4.6",
+    "@mikro-orm/migrations": "6.4.6",
+    "@mikro-orm/postgresql": "6.4.6",
+    "awilix": "^8.0.1",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "@medusajs/test-utils": "2.5.0",
+    "@mikro-orm/cli": "6.4.6",
+    "@swc/core": "1.10.18",
+    "@swc/jest": "^0.2.37",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.19",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.14",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "yarn@4.6.0"
+}

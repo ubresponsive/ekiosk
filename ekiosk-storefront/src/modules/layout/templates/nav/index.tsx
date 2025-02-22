@@ -24,7 +24,7 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus uppercase hover:text-ui-fg-base"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              Ekiosk Store
             </LocalizedClientLink>
           </div>
 

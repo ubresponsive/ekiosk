@@ -25,7 +25,7 @@ export default function CheckoutLayout({ children }: { children: React.ReactNode
             className="txt-compact-xlarge-plus uppercase text-ui-fg-subtle hover:text-ui-fg-base"
             data-testid="store-link"
           >
-            Medusa Store
+            Ekiosk Store
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

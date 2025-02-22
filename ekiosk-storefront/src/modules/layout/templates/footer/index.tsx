@@ -19,7 +19,7 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus uppercase text-ui-fg-subtle hover:text-ui-fg-base"
             >
-              Medusa Store
+              Ekiosk Store
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular grid grid-cols-2 gap-10 sm:grid-cols-3 md:gap-x-16">
@@ -126,7 +126,7 @@ export default async function Footer() {
           </div>
         </div>
         <div className="mb-16 flex w-full justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">© {new Date().getFullYear()} Medusa Store. All rights reserved.</Text>
+          <Text className="txt-compact-small">© {new Date().getFullYear()} Ekiosk Store. All rights reserved.</Text>
           <MedusaCTA />
         </div>
       </div>

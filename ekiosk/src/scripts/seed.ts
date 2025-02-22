@@ -24,10 +24,12 @@ export default async function seedDemoData({ container }: ExecArgs) {
   const salesChannelModuleService = container.resolve(Modules.SALES_CHANNEL);
   const storeModuleService = container.resolve(Modules.STORE);
 
+  logger.info("Seeding store data...");
+
   const countries = ["za"];
 
-  logger.info("Seeding store data...");
   const [store] = await storeModuleService.listStores();
+
   let defaultSalesChannel = await salesChannelModuleService.listSalesChannels({
     name: "Default Sales Channel",
   });
@@ -50,6 +52,7 @@ export default async function seedDemoData({ container }: ExecArgs) {
     input: {
       selector: { id: store.id },
       update: {
+        name: "Ekiosk Store",
         supported_currencies: [
           {
             currency_code: "zar",

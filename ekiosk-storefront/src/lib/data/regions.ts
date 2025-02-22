@@ -55,7 +55,7 @@ export const getRegion = async (countryCode: string) => {
       });
     });
 
-    const region = countryCode ? regionMap.get(countryCode) : regionMap.get("us");
+    const region = countryCode ? regionMap.get(countryCode) : regionMap.get("za");
 
     return region;
   } catch (e: any) {
